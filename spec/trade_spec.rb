@@ -1,12 +1,11 @@
 require('rspec')
 require('trade')
+require 'csv'
+require 'pry'
 
 describe 'Trade' do
-  it 'returns the total number of sales of an item across the coutry' do
-    test_arr = [["Nairobi","DM1210","7000 KSH"],
-    ["Nairobi","DM1182","1968 KSH"],
-    ["Naivasha","DM1182","5858 KSH"],
-    ["Mombasa","DM1210","6876 KSH"], ["Nakuru","DM1182","5464 KSH"]]
-    expect(domestic_trade()).to(eq("Beowulf"))
+  it 'returns the total number of sales of an item across the country' do
+    trade = Trade.new
+    expect(trade.domestic_trade('DM1182')).to(eq({:total_KSH=>5437286.0, :largest=>"Mombasa"}))
   end
 end
