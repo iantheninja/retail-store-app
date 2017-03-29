@@ -1,4 +1,5 @@
 require "csv"
+require "pry"
 
 class Trade
 
@@ -11,6 +12,7 @@ class Trade
       amount = row[2][0,4].to_f
       location = row[0]
       if row[1] == itemId
+        binding.pry
         total_sales += amount
         if !total_location[location]
           total_location[location] = amount
