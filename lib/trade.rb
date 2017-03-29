@@ -4,9 +4,9 @@ require "pry"
 class Trade
 
   def domestic_trade(itemId)
-    transactions = CSV.read('TRANS.csv')
-    total_sales = 0
-    total_location = {}
+    transactions = CSV.read('TRANS.csv') #converts the csv data to an array of arrays with rows
+    total_sales = 0 #variable that we will be adding to
+    total_location = {} #we will use this to sort the store with the largest vol of sales
 
     transactions.each do |row|
       amount = row[2][0,4].to_f
