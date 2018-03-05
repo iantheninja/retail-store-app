@@ -1,8 +1,8 @@
-source ('https://rubygems.org')
+source  'https://rubygems.org'
 require 'rubygems'
 
-gem('pry')
-gem('sinatra')
-gem('rspec')
-gem('capybara')
-gem('launchy')
+gem 'pry'
+gem 'sinatra'
+gem 'rspec'
+gem 'capybara'
+gem 'launchy'
